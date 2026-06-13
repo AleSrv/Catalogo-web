@@ -1,0 +1,21 @@
+export const catalog = {
+  title: "Catálogo Profesional 2026",
+  subtitle: "YMAS",
+  totalPages: 12,
+  imagePath: "/pages/",
+  imageFormat: "svg",
+  pages: [
+    { number: 1, label: "Portada" },
+    { number: 2, label: "Productos Destacados" },
+    { number: 3, label: "Línea Premium" },
+    { number: 4, label: "Novedades" },
+    { number: 5, label: "Colección Verano" },
+    { number: 6, label: "Ofertas Especiales" },
+    { number: 7, label: "Servicios" },
+    { number: 8, label: "Testimonios" },
+    { number: 9, label: "Catálogo Completo" },
+    { number: 10, label: "Contacto" },
+    { number: 11, label: "Términos" },
+    { number: 12, label: "Contraportada" },
+  ],
+};
