@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PageControls({ currentPage, totalPages, onPrev, onNext, onGoToPage }) {
   const [inputValue, setInputValue] = useState(String(currentPage));
+
+  useEffect(() => {
+    setInputValue(String(currentPage));
+  }, [currentPage]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
