@@ -1,16 +1,49 @@
-# React + Vite
+# Catálogo Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visor de catálogos interactivo con navegación por arrastre (drag), similar a un flipbook. Construido con React 19, Vite 8 y Tailwind CSS v4.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Navegación por arrastre con mouse o táctil (deslizar páginas)
+- Navegación por teclado (← →, Home, End)
+- URLs con hash (`#page/1`, `#page/2`) — compatible con back/forward
+- Click en laterales para avanzar/retroceder
+- Miniaturas con scroll automático
+- Pantalla completa
+- Tema oscuro con diseño Stitch (periwinkle)
+- Precarga de páginas adyacentes
+- Responsive (móvil y desktop)
 
-## React Compiler
+## Instalación
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Abrir en `http://localhost:5173/#page/1`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Agregar imágenes
+
+1. Colocar imágenes en `public/pages/` como `1.jpg`, `2.jpg`, etc.
+2. Configurar en `src/data/catalog.js`:
+
+```js
+imageFormat: "jpg",   // jpg, png, webp
+totalPages: 52,
+```
+
+## Scripts
+
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Iniciar servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run generate` | Generar placeholders SVG |
+
+## Stack
+
+- Vite 8 + React 19
+- Tailwind CSS v4
+- Inter + Material Symbols
+- Pointer Events API (drag)
